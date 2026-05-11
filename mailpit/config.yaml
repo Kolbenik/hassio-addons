@@ -1,0 +1,12 @@
+name: "Mailpit"
+description: "Lokaler E-Mail-Server (SMTP-Sink)"
+version: "1.0.0"
+slug: "mailpit"
+init: false
+arch:
+  - aarch64
+  - amd64
+ports:
+  8025/tcp: 8025
+  1025/tcp: 1025
+startup: services
