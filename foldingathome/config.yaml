@@ -1,5 +1,5 @@
 name: "Folding@home"
-version: "1.0.2"
+version: "1.0.3"
 slug: "foldingathome_ls"
 description: "Fighting disease with a world wide distributed super computer (LinuxServer Image)"
 url: "https://github.com/linuxserver/docker-foldingathome"
