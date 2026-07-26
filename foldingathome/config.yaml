@@ -15,9 +15,15 @@ ports:
 ports_description:
   7396/tcp: "Web interface"
   36330/tcp: "Remote command interface"
-environment:
-  ACCOUNT_TOKEN: "DEIN_TOKEN_HIER_EINTRAGEN"
+options:
+  ACCOUNT_TOKEN: ""
   MACHINE_NAME: "HomeAssistant"
-  PUID: "0"
-  PGID: "0"
+  PUID: 0
+  PGID: 0
   TZ: "Europe/Berlin"
+schema:
+  ACCOUNT_TOKEN: str
+  MACHINE_NAME: str
+  PUID: int
+  PGID: int
+  TZ: str
