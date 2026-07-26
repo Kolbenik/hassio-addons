@@ -1,4 +1,11 @@
 FROM lscr.io/linuxserver/foldingathome:latest
 
-# Home Assistant läuft standardmäßig als Root, die PUID/PGID Optionen in der config.yaml 
-# stellen sicher, dass das LinuxServer Image die Berechtigungen korrekt setzt.
+# Tool installieren, um die Home Assistant Optionen lesen zu können
+RUN apt-get update && apt-get install -y jq && rm -rf /var/lib/apt/lists/*
+
+# Unser lokales Start-Skript in den Container kopieren und ausführbar machen
+COPY run.sh /run.sh
+RUN chmod +x /run.sh
+
+# Das Start-Skript ausführen, bevor das eigentliche Image startet
+ENTRYPOINT ["/run.sh"]
